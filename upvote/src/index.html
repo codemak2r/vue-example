@@ -14,8 +14,8 @@
                 <article class="media" v-for="submission in sortedSubmissions" v-bind:class="{'blue-border': submission.votes >= 20}">
                    <submission-component
                         v-bind:submission = "submission"
-                        v-bind:submissions = "sortedSubmissions"
-                   ></submission-component>
+                        v-bind:submissions = "sortedSubmissions">
+                    </submission-component>
                 </article>
             </div>
 
