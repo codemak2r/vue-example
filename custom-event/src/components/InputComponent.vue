@@ -6,6 +6,8 @@
 </template>
 
 <script>
+import { EventBus } from "../Eventbus.js"
+
 export default {
     name: "InputComponent",
     props:["placeholder"],
@@ -16,7 +18,7 @@ export default {
     },
     methods: {
         moniterEnterKey () {
-            this.$emit('add-note', {
+            EventBus.$emit('add-note', {
                 note: this.input,
                 timestamp: new Date().toLocaleString()
             });

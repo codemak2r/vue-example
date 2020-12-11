@@ -15,13 +15,16 @@
           </div>
         </div>
       </div>
-      <InputComponent @add-note="addNote" :placeholder="placeholder"/>
+      <InputComponent :placeholder="placeholder"/>
     </div>
+    <NoteCountComponent />
   </div>
 </template>
 
 <script>
 import InputComponent from "./components/InputComponent.vue"
+import NoteCountComponent from "./components/NoteCountComponent.vue"
+import { EventBus } from "./Eventbus.js"
 export default {
   name: 'App',
   data() {
@@ -38,7 +41,11 @@ export default {
     }
   },
   components: {
-    InputComponent
+    InputComponent,
+    NoteCountComponent
+  },
+  created() {
+    EventBus.$on('add-note', event => this.addNote(event));
   }
 }
 </script>
