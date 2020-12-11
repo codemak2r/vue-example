@@ -1,0 +1,19 @@
+html, body {
+  height: 100%;
+}
+
+.notes-section {
+  width: 500px;
+}
+
+.columns {
+  width: 100%;
+}
+
+.notes, .timestamps {
+  padding: 5px 0px;
+}
+
+.note-count {
+  margin-top: 48px;
+}
