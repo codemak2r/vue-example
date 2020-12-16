@@ -1,6 +1,6 @@
 # calendar-app
 ## 学到什么？
-1. bulma.css / front-awesome.css 可以直接放在 public 就可以使用了
+1. bulma.css / front-awesome.css 可以直接放在 public 并且修改index.html 就可以使用了
 2. 需要安装 sass 的依赖
 ```
 npm install -D sass sass-loader 
